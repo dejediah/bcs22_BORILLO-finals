@@ -5,7 +5,7 @@ import time
 
 # defines the main function of the program
 def main():
-    
+
 # prints out the display interface of the program
     print("""
                                     PALINDROME CHECKER
@@ -89,14 +89,21 @@ class Stack:
                 self.revlist.append(popped_element)
         else:
             return "Stack Underflow"
-        
+
     # cleans the input (aka, removes all numbers, symbols, and spaces)
     def clean(self):
+        valid_chars = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+                       't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+                       'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'}
+        valid_num = '123456789'
         for x in self.palin:
-            if x.isalpha():
+            if x in valid_chars:
                 self.top += 1
                 self.cleanlist.append(x)
-    
+            elif x in valid_num:
+                self.top += 1
+                self.cleanlist.append(x)
+
     # checks to see if reversed input matches the cleaned input and displays result accordingly.
     def check(self):
         if self.cleanlist == self.revlist:
@@ -123,10 +130,6 @@ main()
 I think this code was pretty fun to create. It was definitely a challenge implementing it, 
 since I'm not really used to working with stacks yet, so I didn't really know how to implement stacks
 into the other functions I used.
-
-One of the biggest challenges for was how I would clean the user's input while still making
-the code work with the stack. Another one would be the dilemma of reversing the cleaned
-input also within the bounds of working with the stack.
 
 However, after a few hours of work, I was finally able to understand the bugs in my code and
 was able to debug properly. 
