@@ -124,6 +124,10 @@ I think this code was pretty fun to create. It was definitely a challenge implem
 since I'm not really used to working with stacks yet, so I didn't really know how to implement stacks
 into the other functions I used.
 
+One of the biggest challenges for was how I would clean the user's input while still making
+the code work with the stack. Another one would be the dilemma of reversing the cleaned
+input also within the bounds of working with the stack.
+
 However, after a few hours of work, I was finally able to understand the bugs in my code and
 was able to debug properly. 
 
